@@ -133,7 +133,7 @@ export const DataTable = ({ data }: DataTableProps) => {
                   )}>
                     <div className="flex items-center justify-end gap-1">
                       {highRisk && <AlertTriangle className="h-3 w-3" />}
-                      {formatDecimal(row.alavancagem)}x
+                      {row.alavancagem !== null ? `${formatDecimal(row.alavancagem)}x` : '—'}
                     </div>
                   </td>
                 </tr>
