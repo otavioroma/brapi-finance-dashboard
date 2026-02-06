@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import { FinancialData, FilterState } from '@/types/financial';
 
 const parseCSV = (text: string): FinancialData[] => {
-  const lines = text.trim().split('\n');
-  const headers = lines[0].split(',');
+  const lines = text.trim().replace(/\r/g, '').split('\n');
+  const headers = lines[0].split(',').map(h => h.trim());
   
   return lines.slice(1).map(line => {
     const values = line.split(',');
