@@ -34,10 +34,6 @@ jobs:
       - name: SPA fallback
         run: cp dist/index.html dist/404.html
 
-      - name: Force root index
-        run: |
-          echo '<!doctype html><meta http-equiv="refresh" content="0; url=./404.html">' > dist/index.html
-
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
