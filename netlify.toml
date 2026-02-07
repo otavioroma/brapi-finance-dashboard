@@ -3,9 +3,4 @@
   publish = "dist"
 
 [build.environment]
-  VITE_BASE_PATH = "/dash-finance-brapi/"
-
-[[redirects]]
-  from = "/dash-finance-brapi/*"
-  to = "/dash-finance-brapi/index.html"
-  status = 200
+  VITE_BASE_PATH = "/"
